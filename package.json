@@ -1,0 +1,26 @@
+{
+  "name": "electroplate",
+  "version": "0.0.1",
+  "description": "UI kit for Electron/Chromium-based desktop apps",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fictiveworks/electroplate"
+  },
+  "type": "module",
+  "main": "src/electroplate.js",
+  "module": "src/electroplate.js",
+  "scripts": {
+    "test": "karma start karma.conf.cjs"
+  },
+  "author": "Mark Rickerby <me@maetl.net> (https://maetl.net)",
+  "license": "MIT",
+  "dependencies": {
+    "lit-element": "^2.3.1"
+  },
+  "devDependencies": {
+    "@open-wc/testing": "^2.5.18",
+    "@open-wc/testing-karma": "^3.4.4",
+    "karma": "^5.1.0",
+    "karma-chai": "^0.1.0"
+  }
+}
