@@ -1,5 +1,25 @@
-.button-group {
+.el-button-group {
   position: relative;
-  display: inline-block;
-  vertical-align: middle;
+  display: inline-flex;
+
+  > .el-button:first-of-type {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  > .el-button + .el-button {
+    border-radius: 0;
+    margin-left: -2px;
+    z-index: 0;
+  }
+
+  > .el-button:last-of-type {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+
+  > .el-button:active,
+  > .el-button:focus {
+    z-index: 1;
+  }
 }
