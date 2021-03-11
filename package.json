@@ -1,6 +1,6 @@
 {
   "name": "electroplate",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "UI kit for Electron/Chromium-based desktop apps",
   "repository": {
     "type": "git",
@@ -11,8 +11,7 @@
   "module": "src/electroplate.js",
   "scripts": {
     "build": "npm run build:scss",
-    "build:scss": "sass ui/electroplate.scss ui.css",
-    "test": "karma start karma.conf.cjs"
+    "build:scss": "sass ui/electroplate.scss ui.css"
   },
   "author": "Mark Rickerby <me@maetl.net> (https://maetl.net)",
   "license": "MIT",
@@ -20,10 +19,6 @@
     "lit-element": "^2.3.1"
   },
   "devDependencies": {
-    "@open-wc/testing": "^2.5.18",
-    "@open-wc/testing-karma": "^3.4.4",
-    "karma": "^5.1.0",
-    "karma-chai": "^0.1.0",
     "sass": "^1.32.8"
   }
 }
