@@ -1,13 +1,66 @@
-.button {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.el-box {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.el-button {
   display: inline-block;
+  padding: 0 0.8em;
   margin-bottom: 0;
-  height: 18px;
+  text-align: center;
+  vertical-align: middle;
+  height: initial;
+  font-size: 1em;
+  line-height: 2em;
+  white-space: nowrap;
+  cursor: pointer;
+  z-index: 0;
+  text-shadow: none;
+  border: 1px solid #1c121c;
+  color: #b899b6;
+  background-color: #422a40;
+  background-image: linear-gradient(#482e46, #422a40);
+  border-radius: 3px;
+}
+.el-button:hover {
+  color: #e2d5e1;
+  background-image: linear-gradient(#4e324c, #482e46);
+}
+.el-button:focus {
+  outline: none;
+  border-color: #ef53e6;
+  box-shadow: 0 0 0 1px #ef53e6;
+}
+.el-button:active {
+  background: #352234;
+  border-color: #974A9E;
+  box-shadow: 0 0 0 1px #974A9E;
 }
 
 .button-group {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+}
+
+.el-m-micro.el-button {
+  font-size: 0.8em;
+}
+
+.el-m-small.el-button {
+  font-size: 0.9em;
+}
+
+.el-m-large.el-button {
+  font-size: 1.5em;
 }
 
 /*# sourceMappingURL=ui.css.map */
