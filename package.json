@@ -10,6 +10,8 @@
   "main": "src/electroplate.js",
   "module": "src/electroplate.js",
   "scripts": {
+    "build": "npm run build:scss",
+    "build:scss": "sass ui/electroplate.scss ui.css",
     "test": "karma start karma.conf.cjs"
   },
   "author": "Mark Rickerby <me@maetl.net> (https://maetl.net)",
@@ -21,6 +23,7 @@
     "@open-wc/testing": "^2.5.18",
     "@open-wc/testing-karma": "^3.4.4",
     "karma": "^5.1.0",
-    "karma-chai": "^0.1.0"
+    "karma-chai": "^0.1.0",
+    "sass": "^1.32.8"
   }
 }

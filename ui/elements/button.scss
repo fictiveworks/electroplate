@@ -1,0 +1,7 @@
+$control-line-height: 16px;
+
+.button {
+  display: inline-block;
+  margin-bottom: 0;
+  height: $control-line-height + 2px;
+}
