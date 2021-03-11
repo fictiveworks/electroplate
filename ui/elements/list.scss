@@ -1,0 +1,26 @@
+.el-list {
+  // position: static
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  cursor: default;
+  font-size: 1em;
+  line-height: 2em;
+  color: rgba(184, 153, 182, 1);
+  background-color: #261725;
+
+  li.el-list-item,
+  li.el-list-option {
+    white-space: nowrap;
+    line-height: 2em;
+    padding: 0 0.6em;
+  }
+
+  .el-list-option {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #1c121c;
+  }
+}

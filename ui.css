@@ -70,15 +70,44 @@ select {
   z-index: 1;
 }
 
-.el-m-micro.el-button, .el-m-micro.el-button-group > .el-button {
+.el-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  cursor: default;
+  font-size: 1em;
+  line-height: 2em;
+  color: #b899b6;
+  background-color: #261725;
+}
+.el-list li.el-list-item,
+.el-list li.el-list-option {
+  white-space: nowrap;
+  line-height: 2em;
+  padding: 0 0.6em;
+}
+.el-list .el-list-option {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #1c121c;
+}
+
+.el-m-selected {
+  color: #e2d5e1;
+  background-color: #482e46;
+}
+
+.el-m-micro.el-button, .el-m-micro.el-button-group > .el-button, .el-m-micro.el-list {
   font-size: 0.8em;
 }
 
-.el-m-small.el-button, .el-m-small.el-button-group > .el-button {
+.el-m-mini.el-button, .el-m-mini.el-button-group > .el-button, .el-m-mini.el-list {
   font-size: 0.9em;
 }
 
-.el-m-large.el-button, .el-m-large.el-button-group > .el-button {
+.el-m-midi.el-button, .el-m-midi.el-button-group > .el-button, .el-m-midi.el-list {
   font-size: 1.5em;
 }
 
