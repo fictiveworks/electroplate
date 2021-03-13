@@ -94,6 +94,161 @@ select {
   border-bottom: 1px solid #1c121c;
 }
 
+el-icon {
+  display: inline-flex;
+  align-self: center;
+  top: 0.125em;
+  position: relative;
+}
+
+.el-index {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+.el-index li {
+  height: 2em;
+}
+.el-index li[role=group] {
+  height: auto;
+}
+.el-index > li[role=group] ul {
+  padding-left: 1em;
+}
+.el-index summary:active {
+  outline: none;
+}
+.el-index details ul {
+  display: block;
+}
+.el-index ul, .el-index li, .el-index details {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.el-index summary:focus {
+  outline: none;
+}
+.el-index summary:focus:before {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  left: 0;
+  right: 0;
+  height: 2em;
+  background-color: #ef53e6;
+  content: "";
+}
+.el-index summary,
+.el-index li > span,
+.el-index li > a {
+  cursor: arrow;
+  user-select: none;
+  white-space: nowrap;
+  line-height: 2em;
+  padding: 0 0.6em;
+}
+
+.el-m-micro {
+  font-size: 0.8em;
+}
+
+.el-tree,
+.el-tree ul,
+.el-tree li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.el-tree {
+  width: 100%;
+  margin: 0 0 1em;
+  text-align: center;
+}
+
+.el-tree,
+.el-tree ul {
+  display: table;
+}
+
+.el-tree ul {
+  width: 100%;
+}
+
+.el-tree li {
+  display: table-cell;
+  padding: 0.9em 0;
+  vertical-align: top;
+}
+
+/* _________ */
+.el-tree li:before {
+  background-color: currentColor;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: -2px;
+  height: 1px;
+}
+
+.el-tree li:first-child:before {
+  left: 50%;
+}
+
+.el-tree li:last-child:before {
+  right: 50%;
+}
+
+.el-tree span {
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0.2em 1em;
+  padding: 0 0.6em;
+  vertical-align: middle;
+  position: relative;
+  height: 2em;
+  line-height: 2em;
+}
+
+/* | */
+.el-tree ul:before,
+.el-tree span:before {
+  background-color: currentColor;
+  content: "";
+  height: 0.9em;
+  left: 50%;
+  top: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.el-tree ul:before {
+  top: -1em;
+}
+
+.el-tree span:before {
+  top: -1em;
+}
+
+/* The root node doesn't connect upwards */
+.el-tree > li {
+  margin-top: 0;
+}
+
+.el-tree > li:before,
+.el-tree > li:after,
+.el-tree > li > span:before {
+  background-color: transparent;
+}
+
 .el-m-selected {
   color: #e2d5e1;
   background-color: #482e46;

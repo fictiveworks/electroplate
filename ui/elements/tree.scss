@@ -1,0 +1,95 @@
+$cell-push: 0.9em;
+$cell-push-micron: 0.2em;
+$cell-push-omicron: 1em;
+
+.el-tree,
+.el-tree ul,
+.el-tree li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.el-tree {
+  width: 100%;
+  margin: 0 0 1em;
+  text-align: center;
+}
+
+.el-tree,
+.el-tree ul {
+    display: table;
+}
+
+.el-tree ul {
+  width: 100%;
+}
+
+.el-tree li {
+  display: table-cell;
+  padding: $cell-push 0;
+  vertical-align: top;
+}
+
+/* _________ */
+.el-tree li:before {
+  background-color: currentColor;
+  content: "";
+  left: -0;
+  position: absolute;
+  right: -0;
+  top: -2px;
+  height: 1px;
+}
+
+.el-tree li:first-child:before {
+  left: 50%;
+}
+
+.el-tree li:last-child:before {
+  right: 50%;
+}
+
+.el-tree span {
+  border: 1px solid currentColor;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 $cell-push-micron $cell-push-omicron;
+  padding: 0 0.6em;
+  vertical-align: middle;
+  position: relative;
+  height: 2em;
+  line-height: 2em;
+}
+
+/* | */
+.el-tree ul:before,
+.el-tree span:before {
+  background-color: currentColor;
+  content: "";
+  height: $cell-push;
+  left: 50%;
+  top: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.el-tree ul:before {
+  top: -#{$cell-push-omicron};
+}
+
+.el-tree span:before {
+  top: -#{$cell-push-omicron};
+}
+
+/* The root node doesn't connect upwards */
+.el-tree > li {
+  margin-top: 0;
+}
+
+.el-tree > li:before,
+.el-tree > li:after,
+.el-tree > li > span:before {
+  background-color: transparent;
+}
