@@ -249,20 +249,49 @@ el-icon {
   background-color: transparent;
 }
 
+.el-badge {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1em;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  white-space: nowrap;
+  background-color: #ef53e6;
+  color: #e2d5e1;
+  border-radius: 12px;
+}
+
+.el-status {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1em;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  white-space: nowrap;
+  background-color: #261725;
+  color: #ef53e6;
+}
+
 .el-m-selected {
   color: #e2d5e1;
   background-color: #482e46;
 }
 
-.el-m-micro.el-button, .el-m-micro.el-button-group > .el-button, .el-m-micro.el-list {
+.el-m-micro.el-button, .el-m-micro.el-badge, .el-m-micro.el-button-group > .el-button, .el-m-micro.el-list {
   font-size: 0.8em;
 }
 
-.el-m-mini.el-button, .el-m-mini.el-button-group > .el-button, .el-m-mini.el-list {
+.el-m-mini.el-button, .el-m-mini.el-badge, .el-m-mini.el-button-group > .el-button, .el-m-mini.el-list {
   font-size: 0.9em;
 }
 
-.el-m-midi.el-button, .el-m-midi.el-button-group > .el-button, .el-m-midi.el-list {
+.el-m-midi.el-button, .el-m-midi.el-badge, .el-m-midi.el-button-group > .el-button, .el-m-midi.el-list {
   font-size: 1.5em;
 }
 
