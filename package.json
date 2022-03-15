@@ -1,6 +1,6 @@
 {
   "name": "electroplate",
-  "version": "0.0.4",
+  "version": "0.5.0",
   "description": "UI kit for Electron/Chromium-based desktop apps",
   "repository": {
     "type": "git",
@@ -10,8 +10,10 @@
   "main": "src/electroplate.js",
   "module": "src/electroplate.js",
   "scripts": {
+    "start": "npm run start:scss",
     "build": "npm run build:scss",
-    "build:scss": "sass --watch ui/electroplate.scss ui.css"
+    "build:scss": "sass --style compressed ui/electroplate.scss ui.css",
+    "start:scss": "sass --watch ui/electroplate.scss ui.css"
   },
   "author": "Mark Rickerby <me@maetl.net> (https://maetl.net)",
   "license": "MIT",
@@ -19,6 +21,7 @@
     "lit-element": "^2.3.1"
   },
   "devDependencies": {
+    "http-server": "^14.1.0",
     "sass": "^1.32.8"
   }
 }
