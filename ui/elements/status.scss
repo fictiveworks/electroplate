@@ -1,13 +1,40 @@
 .el-status {
-  display: inline-flex;
-  align-items: center;
-  font-size: 1em;
-  height: 2em;
-  justify-content: center;
-  line-height: 1.5;
-  padding-left: .75em;
-  padding-right: .75em;
-  white-space: nowrap;
-  background-color: #261725;
-  color: #ef53e6;
+  display: inline-block;
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  line-height: 2.5em;
+  vertical-align: middle;
+  font-size: inherit;
+
+  button {
+    all: revert;
+  }
+
+  a,
+  button,
+  small,
+  .el-status-control {
+    display: inline-block;
+    height: 100%;
+    line-height: inherit;
+    text-decoration: none;
+    border: 0;
+    background-color: inherit;
+    color: inherit;
+    font-size: inherit;
+    padding: 0 0.8em;
+  }
+
+  a,
+  button {
+    &:hover {
+      background-color: #422a40;
+    }
+
+    &:active {
+      background: #352234;
+    }
+  }
 }
