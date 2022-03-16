@@ -1,0 +1,38 @@
+@use "../ui/electroplate";
+
+body {
+  background-color: #422a40;
+  background-color: #2F1E2D;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 60%;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+.el-index-wrap {
+  border: 1px solid black;
+  height: 20em;
+  overflow: auto;
+}
+
+.el-toolbar {
+  width: 100%;
+  padding: 0;
+}
+
+header.el-toolbar {
+  border-bottom: 1px solid black;
+}
+
+footer.el-toolbar {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}

@@ -7,21 +7,19 @@
     "url": "https://github.com/fictiveworks/electroplate"
   },
   "type": "module",
-  "main": "src/electroplate.js",
-  "module": "src/electroplate.js",
+  "main": "components.js",
+  "module": "components.js",
   "scripts": {
-    "start": "npm run start:scss",
-    "build": "npm run build:scss",
-    "build:scss": "sass --style compressed ui/electroplate.scss ui.css",
-    "start:scss": "sass --watch ui/electroplate.scss ui.css"
+    "build": "sass --style compressed ui/electroplate.scss ui.css",
+    "start": "run-all 'npm run preview:server' 'npm run preview:watcher'",
+    "preview:server": "snowpack dev",
+    "preview:watcher": "sass --watch docs/preview.scss docs/assets/preview.css"
   },
   "author": "Mark Rickerby <me@maetl.net> (https://maetl.net)",
   "license": "MIT",
-  "dependencies": {
-    "lit-element": "^2.3.1"
-  },
   "devDependencies": {
-    "http-server": "^14.1.0",
-    "sass": "^1.32.8"
+    "run-all": "^1.0.1",
+    "sass": "^1.32.8",
+    "snowpack": "^3.8.8"
   }
 }
