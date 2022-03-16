@@ -11,15 +11,13 @@
   "module": "components.js",
   "scripts": {
     "build": "sass --style compressed ui/electroplate.scss ui.css",
-    "start": "run-all 'npm run preview:server' 'npm run preview:watcher'",
-    "preview:server": "snowpack dev",
-    "preview:watcher": "sass --watch docs/preview.scss docs/assets/preview.css"
+    "start": "snowpack dev"
   },
   "author": "Mark Rickerby <me@maetl.net> (https://maetl.net)",
   "license": "MIT",
   "devDependencies": {
-    "run-all": "^1.0.1",
-    "sass": "^1.32.8",
+    "@snowpack/plugin-sass": "^1.4.0",
+    "sass": "^1.49.9",
     "snowpack": "^3.8.8"
   }
 }

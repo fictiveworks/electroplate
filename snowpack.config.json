@@ -2,5 +2,8 @@
   "mount": {
     "docs": "/",
     "ui": "/ui"
-  }
+  },
+  "plugins": [
+    "@snowpack/plugin-sass"
+  ]
 }

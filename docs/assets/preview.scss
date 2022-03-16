@@ -1,4 +1,18 @@
-@use "../ui/electroplate";
+@use "../../ui/foundation/global";
+@use "../../ui/foundation/typography";
+
+@use "../../ui/elements/box";
+@use "../../ui/elements/button";
+@use "../../ui/elements/button-group";
+@use "../../ui/elements/list";
+@use "../../ui/elements/icon";
+@use "../../ui/elements/index";
+@use "../../ui/elements/tree";
+@use "../../ui/elements/badge";
+@use "../../ui/elements/status";
+
+@use "../../ui/modifiers/selections";
+@use "../../ui/modifiers/sizes";
 
 body {
   background-color: #422a40;
