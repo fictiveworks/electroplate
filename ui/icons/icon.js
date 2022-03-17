@@ -2,7 +2,12 @@ const ICON_SHEET = "/node_modules/electroplate/ui/icons/sheet.svg";
 let ICON_TEMPLATE = null;
 
 const ElIconSvgPaths = {
+  "alt-doc": `<path d="M6 22H18C19.1046 22 20 21.1046 20 20V9.82843C20 9.29799 19.7893 8.78929 19.4142 8.41421L13.5858 2.58579C13.2107 2.21071 12.702 2 12.1716 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22Z" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 2.5V9H19" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 17H15" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 13H15" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 9H9" stroke-linecap="round" stroke-linejoin="round"></path>`,
+  "warning-tri": `<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line>`,
+  "archive": `<polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line>`,
   "cloud": `<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>`,
+  "directory": `<path stroke-linecap="round" stroke-linejoin="round" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" />`,
+  "directory-open": `<path stroke-linecap="round" stroke-linejoin="round" d="M5 19a2 2 0 01-2-2V7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1M5 19h14a2 2 0 002-2v-5a2 2 0 00-2-2H9a2 2 0 00-2 2v5a2 2 0 01-2 2z" />`,
   "folder": `<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>`,
   "folder-fill": `<path fill="currentColor" d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>`,
   "folder-open": `<path d="M2 18H17.5119C18.3952 18 19.1738 17.4207 19.4276 16.5747L21.6138 9.28735C21.8063 8.64574 21.3258 8 20.656 8H20M2 18C1.46957 18 0.960859 17.7893 0.585786 17.4142C0.210714 17.0391 0 16.5304 0 16V2C0 1.46957 0.210714 0.960859 0.585786 0.585786C0.960859 0.210714 1.46957 0 2 0H7L9 3H18C18.5304 3 19.0391 3.21071 19.4142 3.58579C19.7893 3.96086 20 4.46957 20 5V8M2 18L4.7862 8.71265C4.9131 8.28967 5.30242 8 5.74403 8H20" transform="translate(1 3)" />`,

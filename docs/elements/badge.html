@@ -6,9 +6,9 @@
   <link rel="stylesheet" type="text/css" href="/assets/preview.css">
 </head>
 <body>
-<h1>Badge</h1>
+  <h1>Badge</h1>
 
-<article class="example-element">
+    <article class="example-element">
       <header class="example-header">
         <h2>Badge</h2>
       </header>
@@ -60,6 +60,84 @@
       </div>
     </article>
 
+    <article class="example-element">
+      <header class="example-header">
+        <h2>Badge With Icon</h2>
+      </header>
+      <div class="example-body">
+
+        <span class="el-badge" style="font-size:2em">
+          <el-icon name="folder-fill" stroke-width="1.5"></el-icon>
+          <span>Folder</span>
+        </span>
+
+      </div>
+    </article>
+
+    <article class="example-element">
+      <header class="example-header">
+        <h2>Indicator Badges</h2>
+      </header>
+      <div class="example-body">
+
+        <div class="el-box">
+
+          <div class="el-status">
+            <el-icon  style="font-size:4em" name="file-text"></el-icon>
+            <sup class="el-badge">9</sup>
+          </div>
+
+          <div class="el-status">
+            <el-icon  style="font-size:4em" name="file-text"></el-icon>
+            <sub class="el-badge">9</sub>
+          </div>
+
+          <div class="el-status">
+            <sup class="el-badge">9</sup>
+            <el-icon  style="font-size:4em" name="file-text"></el-icon>
+          </div>
+
+          <div class="el-status">
+            <sub class="el-badge">9</sub>
+            <el-icon  style="font-size:4em" name="file-text"></el-icon>
+          </div>
+
+        </div>
+
+        <div class="el-box">
+
+          <div class="el-status">
+            <el-icon  style="font-size:4em" name="book"></el-icon>
+            <sup class="el-badge">9</sup>
+          </div>
+
+          <div class="el-status">
+            <el-icon  style="font-size:4em" name="book"></el-icon>
+            <sub class="el-badge">9</sub>
+          </div>
+
+          <div class="el-status">
+            <sup class="el-badge">9</sup>
+            <el-icon  style="font-size:4em" name="book"></el-icon>
+          </div>
+
+          <div class="el-status">
+            <sub class="el-badge" id="fade">9</sub>
+            <el-icon  style="font-size:4em" name="book"></el-icon>
+          </div>
+
+        </div>
+
+      </div>
+    </article>
+
 <script type="module" src="/assets/preview.js"></script>
+<script>
+const fade = document.getElementById("fade");
+fade.parentNode.addEventListener("click", () => {
+  fade.classList.toggle("is-hidden");
+});
+
+</script>
 </body>
 </html>
