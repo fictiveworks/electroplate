@@ -1,7 +1,7 @@
-const ICON_SHEET = "/node_modules/electroplate/ui/icons/sheet.svg";
 let ICON_TEMPLATE = null;
 
-const ElIconSvgPaths = {
+const IconSvgPaths = {
+  "close": `<line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>`,
   "alt-doc": `<path d="M6 22H18C19.1046 22 20 21.1046 20 20V9.82843C20 9.29799 19.7893 8.78929 19.4142 8.41421L13.5858 2.58579C13.2107 2.21071 12.702 2 12.1716 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22Z" stroke-linecap="round" stroke-linejoin="round"></path><path d="M13 2.5V9H19" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 17H15" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 13H15" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 9H9" stroke-linecap="round" stroke-linejoin="round"></path>`,
   "warning-tri": `<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line>`,
   "archive": `<polyline points="21 8 21 21 3 21 3 8"></polyline><rect x="1" y="3" width="22" height="5"></rect><line x1="10" y1="12" x2="14" y2="12"></line>`,
@@ -24,7 +24,7 @@ const ElIconSvgPaths = {
   <path d="M21.9980469,11.4202303 L21.9980469,4.05252878 C21.9980469,3.46311266 21.5349342,3 20.9455181,3 L7.26264391,3 L3.05252878,3 C2.46311266,3 2,3.46311266 2,4.05252878 L2,5.10505757 L2,7.42062089" id="Shape" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>`
 }
 
-class ElIcon extends HTMLElement {
+class IconElement extends HTMLElement {
   static get observedAttributes() {
     return ["name", "stroke-width"];
   }
@@ -40,17 +40,14 @@ class ElIcon extends HTMLElement {
 
     const clone = ICON_TEMPLATE.content.cloneNode(true);
 
-
     this.shadowRoot.appendChild(clone);
 
-    //this.useEl = this.shadowRoot.getElementById('use');
     this.svgImage = this.shadowRoot.querySelector("svg");
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    //this.useEl.setAttribute('xlink:href', `${ICON_SHEET}#${newValue}`);
     if (name == "name") {
-      this.svgImage.innerHTML = ElIconSvgPaths[newValue];
+      this.svgImage.innerHTML = IconSvgPaths[newValue];
     } else if (name == "stroke-width") {
       this.svgImage.setAttribute("stroke-width", newValue);
     }
@@ -64,22 +61,19 @@ function createIconTemplate() {
   const iconStyle = document.createElement("style");
 
   iconTemplate.setAttribute("id", "icon-template");
-  //iconEmbed.setAttribute("viewBox", "0 0 48 48");
   iconEmbed.setAttribute("viewBox", "0 0 24 24");
   iconEmbed.setAttribute("stroke", "currentColor");
   iconEmbed.setAttribute("stroke-width", "1");
   iconEmbed.setAttribute("stroke-linecap", "round");
   iconEmbed.setAttribute("stroke-linejoin", "round");
-  //iconUseRef.setAttribute("id", "use");
-  //iconUseRef.setAttributeNS("http://www.w3.org/1999/xlink","xlink:href", "");
-  iconStyle.innerHTML = `:host { display: inline; }
+  iconStyle.innerHTML = `
+    :host { display: inline; }
     svg { display: inline-block; width: 1em; height: 1em; fill: transparent; }
-    `;
+  `;
   iconEmbed.appendChild(iconUseRef);
   iconTemplate.content.append(iconStyle);
   iconTemplate.content.append(iconEmbed);
   return iconTemplate;
 }
 
-// Finally lets define this custom element
-customElements.define('el-icon', ElIcon);
+customElements.define('el-icon', IconElement);
