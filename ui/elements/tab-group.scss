@@ -1,0 +1,119 @@
+/* TODO: move this to theming system */
+:root {
+  --color-bg-primary: #422a40;
+  --color-bg-secondary: #2F1E2D;
+  --color-bg-tertiary: #271022;
+  --color-highlight: #ef53e6;
+  --color-txt-primary: #fff;
+  --color-txt-secondary: #b899b6;
+}
+
+el-tab-group,
+.el-tab-group {
+  width: 100%;
+}
+
+el-tab-list,
+.el-tab-list {
+  height: 2.25em;
+  display: flex;
+  background-color: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-bg-tertiary);
+}
+
+el-tab,
+.el-tab {
+  color: var(--color-txt-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 12px;
+  user-select: none;
+  border-right: 1px solid var(--color-bg-tertiary);
+  background-color: var(--color-bg-secondary);
+  box-shadow: 0 1px 0 var(--color-bg-tertiary);
+}
+
+el-tab.active,
+.el-tab.active {
+  background-color: var(--color-bg-primary);
+  color: var(--color-txt-primary);
+  box-shadow: 0 1px 0 var(--color-bg-primary);
+}
+
+el-tab::before,
+.el-tab::before {
+  content: "";
+  position: relative;
+  width: 4px;
+  height: 100%;
+}
+
+el-tab.active::before,
+.el-tab.active::before {
+  background-color: var(--color-highlight);
+}
+
+el-tab a,
+.el-tab a,
+el-tab span,
+.el-tab span,
+el-tab data,
+.el-tab data,
+el-tab button,
+.el-tab button {
+  display: block;
+}
+
+el-tab a,
+.el-tab a,
+el-tab span,
+.el-tab span,
+el-tab data,
+.el-tab data {
+  margin: 0 4em 0 5em;
+  pointer-events: none;
+}
+
+el-tab .el-action-close,
+.el-tab .el-action-close {
+  margin-right: 0.5em;
+  visibility: hidden;
+  background-color: transparent;
+  border: none;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 0.25em;
+}
+
+el-tab:hover .el-action-close,
+.el-tab:hover .el-action-close {
+  visibility: visible;
+}
+
+.el-action-close {
+  color: var(--color-txt-secondary);
+}
+
+el-tab.active .el-action-close line,
+.el-tab.active .el-action-close line {
+  stroke: var(--color-txt-secondary);
+}
+
+.el-action-close:hover {
+  color: var(--color-txt-primary);
+  background-color: var(--color-highlight);
+}
+
+.el-action-close:active {
+  opacity: 0.7;
+}
+
+/* Should use active or focused modifier */
+el-tab-scope .el-box,
+.el-tab-scope .el-box {
+  background-color: var(--color-bg-primary);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
