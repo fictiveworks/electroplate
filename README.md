@@ -45,15 +45,15 @@ UI kit for Electron/Chromium-based desktop apps
 
 ### 0.6
 
-- el-tabset
-- el-panel
+Current progress: integrating tabs and workspace areas.
+
+- ~~el-tab-group~~
+- el-workspace
 
 ### 0.5
 
-Current progress: working out badges and status
-
-- **el-status**
-- **el-badge**
+- ~~el-status~~
+- ~~el-badge~~
 
 ## License
 
