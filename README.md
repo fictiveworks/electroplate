@@ -48,7 +48,7 @@ UI kit for Electron/Chromium-based desktop apps
 Current progress: integrating tabs and workspace areas.
 
 - ~~el-tab-group~~
-- el-workspace
+- ~~el-workspace~~
 
 ### 0.5
 
