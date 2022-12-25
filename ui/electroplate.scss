@@ -1,5 +1,6 @@
 @use "foundation/global";
 @use "foundation/typography";
+@use "foundation/theme";
 
 @use "elements/box";
 @use "elements/button";
@@ -12,6 +13,9 @@
 @use "elements/status";
 @use "elements/tab-group";
 @use "elements/workspace";
+@use "elements/text";
+@use "elements/checkbox";
+@use "elements/radio";
 
 @use "modifiers/selections";
 @use "modifiers/sizes";

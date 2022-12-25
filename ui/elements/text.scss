@@ -1,0 +1,21 @@
+.el-text {
+  background-color: var(--color-bg-primary);
+  border: 0;
+  border: 1px solid var(--color-bg-primary);
+  border-bottom: 1px solid var(--color-txt-secondary);
+  color: var(--color-txt-primary);
+  display: inline-block;
+  width: 100%;
+  padding: 0.8em;
+  font-size: 1em;
+
+  &::placeholder {
+    color: var(--color-txt-secondary);
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #ef53e6;
+    box-shadow: 0 0 0 1px #ef53e6;
+  }
+}

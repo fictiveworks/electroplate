@@ -1,5 +1,6 @@
 @use "../../ui/foundation/global";
 @use "../../ui/foundation/typography";
+@use "../../ui/foundation/theme";
 
 @use "../../ui/elements/box";
 @use "../../ui/elements/button";
@@ -12,6 +13,10 @@
 @use "../../ui/elements/status";
 @use "../../ui/elements/tab-group";
 @use "../../ui/elements/workspace";
+@use "../../ui/elements/text";
+@use "../../ui/elements/checkbox";
+@use "../../ui/elements/radio";
+@use "../../ui/elements/toggle";
 
 @use "../../ui/modifiers/selections";
 @use "../../ui/modifiers/sizes";
@@ -51,4 +56,21 @@ header.el-toolbar {
 footer.el-toolbar {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+}
+
+.el-toolbar {
+  background-color: var(--color-bg-primary);
+
+  // .el-button {
+  //   border-top-color: transparent;
+  // }
+
+  .el-button:first-of-type,
+  .el-button:last-of-type {
+    border-radius: 0;
+  }
+}
+
+.example-body {
+  margin: 1em 0;
 }
