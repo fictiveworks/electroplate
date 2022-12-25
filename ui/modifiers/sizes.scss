@@ -1,4 +1,6 @@
 .el-m-micro {
+  font-size: 0.8em;
+
   &.el-button,
   &.el-badge,
   &.el-button-group > .el-button,
@@ -8,6 +10,8 @@
 }
 
 .el-m-mini {
+  font-size: 0.9em;
+
   &.el-button,
   &.el-badge,
   &.el-button-group > .el-button,
@@ -17,6 +21,8 @@
 }
 
 .el-m-midi {
+  font-size: 1.5em;
+
   &.el-button,
   &.el-badge,
   &.el-button-group > .el-button,
