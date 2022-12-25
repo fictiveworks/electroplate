@@ -1,0 +1,59 @@
+.el-radio {
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    margin: 0;
+    line-height: 1.1;
+    user-select: none;
+    // &:focus-within {
+    //   outline: 1px dotted #b899b6;
+    //   outline-offset: 0.5em;
+    // }
+
+    input[type=radio] {
+      width: 1em;
+      height: 1em;
+      appearance: none;
+      margin: 0;
+      font: inherit;
+      color: currentColor;
+      border-radius: 50%;
+      display: grid;
+      place-content: center;
+      background-color: #b899b6;
+    
+      &::before {
+        content: "";
+        width: 0.4em;
+        height: 0.4em;
+        transform: scale(0);
+        transition: 80ms transform ease-in-out;
+        box-shadow: inset 1em 1em #2F1E2D;
+        border-radius: 50%;
+      }
+    
+      &:checked {
+        transition: 80ms background-color ease-in-out;
+        background-color: #ef53e6;
+      }
+    
+      &:checked::before {
+        transform: scale(1);
+      }
+    
+      &:focus {
+        outline: 0.0625em solid #ef53e6;
+        outline-offset: 0.125em;
+      }
+    }
+  }
+  
+  .el-radio + .el-radio {
+    margin-top: 1em;
+  }
+  
+  .el-m-mini .el-radio input[type=radio]:focus,
+  .el-m-micro .el-radio input[type=radio]:focus {
+    outline: 1px solid #ef53e6;
+    outline-offset: 2px;
+  }  
