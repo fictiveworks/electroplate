@@ -1,0 +1,55 @@
+.el-toggle {
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 1.5em;
+  margin: 0;
+  line-height: 1.1;
+  user-select: none;
+
+  input[type=checkbox] {
+    width: 2em;
+    height: 1.1em;
+    appearance: none;
+    margin: 0;
+    font: inherit;
+    border-radius: 1em;
+    background-color: #b899b6;
+    display: grid;
+    place-content: center;
+
+    &::before {
+      content: "";
+      width: 0.75em;
+      height: 0.75em;
+      box-shadow: inset 1em 1em #2F1E2D;
+      border-radius: 50%;
+      transform: translate(-0.5em, 0);
+      transition: 80ms transform ease-in-out;
+    }
+
+    &:checked {
+      transition: 80ms background-color ease-in-out;
+      background-color: #ef53e6;
+    }
+
+    &:checked::before {
+      transform: translate(0.5em, 0);
+      transition: 80ms transform ease-in-out;
+    }
+
+    &:focus {
+      outline: 0.0625em solid #ef53e6;
+      outline-offset: 0.125em;
+    }
+  }
+}
+
+.el-toggle + .el-toggle {
+  margin-top: 1em;
+}
+
+.el-m-mini .el-toggle input[type=checkbox]:focus,
+.el-m-micro .el-toggle input[type=checkbox]:focus {
+  outline: 1px solid #ef53e6;
+  outline-offset: 2px;
+}
