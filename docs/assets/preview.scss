@@ -17,6 +17,7 @@
 @use "../../ui/elements/checkbox";
 @use "../../ui/elements/radio";
 @use "../../ui/elements/toggle";
+@use "../../ui/elements/toolbar";
 
 @use "../../ui/modifiers/selections";
 @use "../../ui/modifiers/sizes";
@@ -44,33 +45,14 @@ h1, h2 {
   overflow: auto;
 }
 
-.el-toolbar {
-  width: 100%;
-  padding: 0;
-}
-
-header.el-toolbar {
-  border-bottom: 1px solid black;
-}
-
-footer.el-toolbar {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
-.el-toolbar {
-  background-color: var(--color-bg-primary);
-
-  // .el-button {
-  //   border-top-color: transparent;
-  // }
-
-  .el-button:first-of-type,
-  .el-button:last-of-type {
-    border-radius: 0;
-  }
-}
-
 .example-body {
   margin: 1em 0;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #efefef;
 }

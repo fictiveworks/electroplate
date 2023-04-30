@@ -1,0 +1,75 @@
+header.el-toolbar {
+  border-bottom: 1px solid black;
+}
+  
+footer.el-toolbar {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.el-toolbar {
+  width: 100%;
+  padding: 0;
+  background-color: var(--color-bg-primary);
+  position: relative;
+  display: inline-flex;
+  
+  .el-button {
+    border-radius: 0;
+  }
+
+  .el-separator {
+    display: inline-block;
+    border-top: 1px solid var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-bg-secondary);
+    width: 23px;
+  }
+  
+  .el-separator::after {
+    display: inline-block;
+    content: " ";
+    width: 1px;
+    height: calc(100% - 12px);
+    margin: 6px 0 6px 11px;
+    background-color: #000;
+  }
+
+  // > .el-button:first-of-type {
+  //   border-top-right-radius: 0;
+  //   border-bottom-right-radius: 0;
+  // }
+
+  > .el-button + .el-button {
+    margin-left: -2px;
+    z-index: 0;
+  }
+
+  // > .el-button:last-of-type {
+  //   border-top-right-radius: 3px;
+  //   border-bottom-right-radius: 3px;
+  // }
+
+  > .el-button:active,
+  > .el-button:focus {
+    z-index: 1;
+    box-shadow: none !important;
+  }
+}
+
+.el-toolbar.el-m-vertical {
+  flex-direction: column;
+
+  > .el-button {
+    margin-left: 0;
+    margin-bottom: -2px;
+  }
+}
+
+.el-toolbar.el-toolbar-palette {
+  width: 3em;
+
+  .el-button {
+    width: 3em;
+    height: 3em;
+  }
+}
