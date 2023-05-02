@@ -34,6 +34,8 @@ el-workspace-area,
   order: 1;
 }
 
+// TODO: Flex basis 100% needed on child elements or remove flex containers entirely
+
 el-workspace-area nav,
 .el-workspace-area nav {
   flex-grow: 2;

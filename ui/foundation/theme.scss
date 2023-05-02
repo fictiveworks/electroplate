@@ -1,8 +1,105 @@
 :root {
-  --color-bg-primary: #422a40;
-  --color-bg-secondary: #2F1E2D;
-  --color-bg-tertiary: #271022;
-  --color-highlight: #ef53e6;
-  --color-txt-primary: #fff;
-  --color-txt-secondary: #b899b6;
+  // --color-bg-primary: #422a40;
+  // --color-bg-secondary: #2F1E2D;
+  // --color-bg-tertiary: #271022;
+  // --color-highlight: #ef53e6;
+  // --color-txt-primary: #fff;
+  // --color-txt-secondary: #b899b6;
+}
+
+:root {
+  --color-surface-border: #B999B7;
+  --color-surface-background: #E2D5E1;
+  --color-surface-panel: #FFF5FE;
+  --color-surface-alert: #F5ABF1;
+
+  --color-text-primary: #261725;
+  --color-text-secondary: #3B263A;
+  --color-text-subtle: #816780;
+
+  --color-control-ready: #E7C8E6;
+  --color-control-hover: #f6d8f5;
+  --color-control-pressed: #B999B7;
+
+  --color-accent-green: #73C990;
+
+  // Parisio colours
+  // --color-syntax-keyword: #815BA4;
+  // --color-syntax-string: #48B685;
+  // --color-syntax-class: #FEC418;
+  // --color-syntax-method: #06B6EF;
+  // --color-syntax-regex: #5BC4BF;
+  // --color-syntax-value: #F99B15;
+  // --color-syntax-operator: #816780;
+  // --color-syntax-delimiter: #E96BA8;
+  // --color-syntax-variable: #EF6155;
+
+  --color-syntax-keyword: #6342A6;
+  --color-syntax-string: #42A64B;
+  --color-syntax-class: #FFC619;
+  --color-syntax-method: #3D79CC;
+  --color-syntax-regex: #3EB3AD;
+  --color-syntax-value: #E68F17;
+  --color-syntax-operator: #816780;
+  --color-syntax-delimiter: #BF4DB6;
+  --color-syntax-variable: #BF3326;
+}
+
+[data-color-scheme=dark] {
+  --color-surface-border: #1D121D;
+  --color-surface-background: #261725;
+  --color-surface-panel: #3B263A;
+  --color-text-primary: #E2D5E1;
+  --color-text-secondary: #B999B7;
+  --color-text-subtle: #816780;
+
+  --color-control-ready: #422a40;
+  --color-control-hover: #4e324c;
+  --color-control-pressed: #352234;
+
+  --color-syntax-keyword: #7F60BF;
+  --color-syntax-string: #60BF68;
+  --color-syntax-class: #E6B82E;
+  --color-syntax-method: #5C95E6;
+  --color-syntax-regex: #5ECCC6;
+  --color-syntax-value: #E6992E;
+  --color-syntax-operator: #816780;
+  --color-syntax-delimiter: #D96CD0;
+  --color-syntax-variable: #D94E41;
+}
+
+.syntax-keyword {
+  color: var(--color-syntax-keyword);
+}
+
+.syntax-string {
+  color: var(--color-syntax-string);
+}
+
+.syntax-class {
+  color: var(--color-syntax-class);
+}
+
+.syntax-method {
+  color: var(--color-syntax-method);
+}
+
+.syntax-regex {
+  color: var(--color-syntax-regex);
+}
+
+.syntax-value {
+  color: var(--color-syntax-value);
+}
+
+.syntax-operator {
+  color: var(--color-syntax-operator);
+}
+
+.syntax-delimiter {
+  color: var(--color-syntax-delimiter);
+}
+
+.syntax-variable {
+  color: var(--color-syntax-variable);
 }

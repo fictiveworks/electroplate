@@ -11,15 +11,14 @@
   cursor: pointer;
   z-index: 0;
   text-shadow: none;
-  border: 1px solid #1c121c;
-  color: #b899b6;
-  background-color: #422a40;
-  background-image: linear-gradient(#482e46, #422a40);
+  border: 1px solid var(--color-surface-border);
+  color: var(--color-text-secondary);
+  background-color: var(--color-control-ready);
   border-radius: 3px;
 
   &:hover {
-    color: #e2d5e1;
-    background-image: linear-gradient(#4e324c, #482e46);
+    color: var(--color-text-primary);
+    background-color: color-mix(in srgb, #fff 20%, var(--color-control-ready));
   }
 
   &:focus {
@@ -29,8 +28,20 @@
   }
 
   &:active {
-    background: #352234;
     border-color: #974A9E;
     box-shadow: 0 0 0 1px #974A9E;
+    background-color: color-mix(in srgb, #000 4%, var(--color-control-ready));
+  }
+}
+
+[data-color-scheme=dark] {
+  .el-button {
+    &:hover {
+      background-color: color-mix(in srgb, #fff 4%, var(--color-control-ready));
+    }
+
+    &:active {
+      background-color: color-mix(in srgb, #000 4%, var(--color-control-ready));
+    }
   }
 }
