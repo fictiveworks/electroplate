@@ -7,8 +7,8 @@ el-tab-list,
 .el-tab-list {
   height: 2.25em;
   display: flex;
-  background-color: var(--color-bg-secondary);
-  border-bottom: 1px solid var(--color-bg-tertiary);
+  background-color: var(--color-surface-background);
+  border-bottom: 1px solid var(--color-surface-border);
 }
 
 el-tab,
@@ -17,18 +17,18 @@ el-tab,
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  font-size: 12px;
+  min-width: 0;
   user-select: none;
-  border-right: 1px solid var(--color-bg-tertiary);
-  background-color: var(--color-bg-secondary);
-  box-shadow: 0 1px 0 var(--color-bg-tertiary);
+  border-right: 1px solid var(--color-surface-border);
+  background-color: var(--color-surface-background);
+  box-shadow: 0 1px 0 var(--color-surface-border);
 }
 
 el-tab.active,
 .el-tab.active {
-  background-color: var(--color-bg-primary);
-  color: var(--color-txt-primary);
-  box-shadow: 0 1px 0 var(--color-bg-primary);
+  background-color: var(--color-surface-panel);
+  color: var(--color-text-primary);
+  box-shadow: 0 1px 0 var(--color-surface-panel);
 }
 
 el-tab::before,
@@ -41,7 +41,7 @@ el-tab::before,
 
 el-tab.active::before,
 .el-tab.active::before {
-  background-color: var(--color-highlight);
+  background-color: var(--color-surface-alert);
 }
 
 el-tab a,
@@ -61,14 +61,32 @@ el-tab span,
 .el-tab span,
 el-tab data,
 .el-tab data {
-  margin: 0 4em 0 5em;
+  margin: 0 0 0 1em;
   pointer-events: none;
+}
+
+el-tab span,
+el-tab data,
+.el-tab span,
+.el-tab data {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 1ch;
+}
+
+el-tab span:last-child,
+el-tab data:last-child,
+.el-tab span:last-child,
+.el-tab data:last-child {
+  margin-right: calc(1em + 4px);
 }
 
 el-tab .el-action-close,
 .el-tab .el-action-close {
-  margin-right: 0.5em;
-  visibility: hidden;
+  margin-left: 0.5em;
+  margin-right: calc(0.5em + 4px);
+ /*visibility: hidden;*/
   background-color: transparent;
   border: none;
   width: 1.5em;
@@ -82,17 +100,17 @@ el-tab:hover .el-action-close,
 }
 
 .el-action-close {
-  color: var(--color-txt-secondary);
+  color: var(--color-text-secondary);
 }
 
 el-tab.active .el-action-close line,
 .el-tab.active .el-action-close line {
-  stroke: var(--color-txt-secondary);
+  stroke: var(--color-text-secondary);
 }
 
 .el-action-close:hover {
-  color: var(--color-txt-primary);
-  background-color: var(--color-highlight);
+  color: var(--color-text-primary);
+  background-color: var(--color-surface-alert);
 }
 
 .el-action-close:active {
@@ -102,7 +120,7 @@ el-tab.active .el-action-close line,
 /* Should use active or focused modifier */
 el-tab-scope .el-box,
 .el-tab-scope .el-box {
-  background-color: var(--color-bg-primary);
+  background-color: var(--color-surface-panel);
   width: 100%;
   height: 100%;
   overflow: auto;
