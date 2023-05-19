@@ -13,7 +13,7 @@ el-tab-list,
 
 el-tab,
 .el-tab {
-  color: var(--color-txt-secondary);
+  color: var(--color-text-secondary);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -86,21 +86,19 @@ el-tab .el-action-close,
 .el-tab .el-action-close {
   margin-left: 0.5em;
   margin-right: calc(0.5em + 4px);
- /*visibility: hidden;*/
+  visibility: hidden;
   background-color: transparent;
   border: none;
   width: 1.5em;
   height: 1.5em;
   border-radius: 0.25em;
+  position: relative;
+  color: var(--color-text-secondary);
 }
 
 el-tab:hover .el-action-close,
 .el-tab:hover .el-action-close {
   visibility: visible;
-}
-
-.el-action-close {
-  color: var(--color-text-secondary);
 }
 
 el-tab.active .el-action-close line,
@@ -117,7 +115,23 @@ el-tab.active .el-action-close line,
   opacity: 0.7;
 }
 
-/* Should use active or focused modifier */
+el-tab.is-dirty .el-action-close el-icon:after,
+.el-tab.is-dirty .el-action-close el-icon:after {
+  visibility: visible;
+  content: " ";
+  position: absolute;
+  top: 0.1em;
+  width: 0.75em;
+  height: 0.75em;
+  border-radius: 50%;
+  background-color: #ef53e6;
+}
+
+el-tab.is-dirty:hover .el-action-close el-icon:after {
+  visibility: hidden;
+}
+
+/* Should use active or focused modifier? */
 el-tab-scope .el-box,
 .el-tab-scope .el-box {
   background-color: var(--color-surface-panel);
