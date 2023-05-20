@@ -13,7 +13,9 @@
 @use "../../ui/elements/status";
 @use "../../ui/elements/tab-group";
 @use "../../ui/elements/workspace";
+@use "../../ui/elements/control";
 @use "../../ui/elements/text";
+@use "../../ui/elements/number";
 @use "../../ui/elements/checkbox";
 @use "../../ui/elements/radio";
 @use "../../ui/elements/toggle";
@@ -26,7 +28,7 @@ body {
   background-color: var(--color-surface-background);
   color: var(--color-surface-primary);
   margin: 0;
-  padding: 0;
+  padding: 2em;
 }
 
 main {

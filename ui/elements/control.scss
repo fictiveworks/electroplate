@@ -1,0 +1,19 @@
+input {
+  background-color: var(--color-surface-panel);
+  border: 1px solid var(--color-surface-border);
+  /*border-bottom: 1px solid var(--color-text-tertiary);*/
+  color: var(--color-text-primary);
+  display: inline-block;
+  padding: 0.25em;
+  font-size: 1em;
+    
+  &:focus {
+    outline: none;
+    border-color: #ef53e6;
+    box-shadow: 0 0 0 1px #ef53e6;
+  }
+}
+
+input::placeholder {
+  color: var(--color-text-secondary);
+}

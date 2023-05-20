@@ -33,7 +33,7 @@ UI kit for Electron/Chromium-based desktop apps
 
 Current progress: integrating form controls.
 
-- el-controls
+- el-control
 - el-text
 - el-search
 - el-textarea
@@ -41,7 +41,7 @@ Current progress: integrating form controls.
 - ~~el-checkbox~~
 - ~~el-toggle~~
 - el-range
-- el-number
+- ~~el-number~~
 - el-color
 - el-select
 

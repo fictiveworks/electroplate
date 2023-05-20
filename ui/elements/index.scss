@@ -8,10 +8,6 @@
   overflow: auto;
   position: relative;
 
-  li {
-    height: 2em;
-  }
-
   li[role=group] {
     height: auto;
   }
@@ -26,6 +22,7 @@
 
   details ul {
     display: block;
+    margin-left: 0.5em;
   }
 
   ul, li, details {
