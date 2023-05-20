@@ -17,6 +17,7 @@
 @use "../../ui/elements/text";
 @use "../../ui/elements/number";
 @use "../../ui/elements/checkbox";
+@use "../../ui/elements/range";
 @use "../../ui/elements/radio";
 @use "../../ui/elements/toggle";
 @use "../../ui/elements/toolbar";
@@ -26,7 +27,7 @@
 
 body {
   background-color: var(--color-surface-background);
-  color: var(--color-surface-primary);
+  color: var(--color-text-primary);
   margin: 0;
   padding: 2em;
 }

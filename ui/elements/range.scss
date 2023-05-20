@@ -1,0 +1,49 @@
+.el-range {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  .el-range-track {
+    width: calc(100% - 4px);
+    left: 2px;
+    position: absolute;
+    height: 1.5em;
+    background-color: var(--color-surface-border);
+    z-index: 10;
+  }
+
+  .el-range-fill {
+    height: 1.5em;
+    background-color: #974A9E;
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+    width: 0px;
+    transition: width 0.2s ease-out;
+  }
+
+  .el-button {
+    position: absolute;
+    z-index: 1000;
+    padding: 0;
+    line-height: 0;
+    border-radius: 3px !important;
+    color: var(--color-text-subtle);
+    transition: left 0.2s ease-out;
+    left: 0px;
+
+    &:hover {
+      cursor: grab;
+    }
+  }
+
+  // Range click transitions mess with immediate repositioning
+  // so we arbitrarily remove them during the drag event sequence.
+  &[data-grabbing] {
+    .el-range-fill,
+    .el-button {
+      transition: none;
+    }
+  }
+}
