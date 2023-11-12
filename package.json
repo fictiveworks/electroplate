@@ -1,6 +1,6 @@
 {
   "name": "electroplate",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "UI kit for Electron/Chromium-based desktop apps",
   "repository": {
     "type": "git",
