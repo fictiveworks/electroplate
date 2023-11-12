@@ -90,7 +90,9 @@ const IconSvgPaths = {
   <path d="M6,22.0525288 C6,22.6419449 6.46311266,23.1050576 7.05252878,23.1050576 L18.9882052,23.1050576 L18.9882052,21 L7.05252878,21 C6.46311266,21 6,21.4631127 6,22.0525288 Z" id="Shape" fill="#7CCACB" fill-rule="nonzero"></path>
   <path d="M20.5876583,22.6828742 L3.05252878,22.6828742 C2.46311266,22.6828742 2,22.2197615 2,21.6303454 L2,10.0525288 C2,9.46311266 2.46311266,9 3.05252878,9 L7.72575658,9 C8.10466694,9 8.46252673,9.14735403 8.71513363,9.42101151 L9.99921875,10.6840461 C10.2728762,10.9577035 10.6096854,11.1050576 10.9885958,11.1050576 L18.124741,11.1050576 C18.7141571,11.1050576 19.1772697,11.5681702 19.1772697,12.1575863 L19.1772697,21.2724856 C19.1983203,22.0513569 19.8298376,22.6828742 20.5876583,22.6828742 C21.3665296,22.6828742 21.9980469,22.0513569 21.9980469,21.2724856 L21.9980469,11.1050576" id="Shape" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
   <path d="M21.9980469,11.4202303 L21.9980469,4.05252878 C21.9980469,3.46311266 21.5349342,3 20.9455181,3 L7.26264391,3 L3.05252878,3 C2.46311266,3 2,3.46311266 2,4.05252878 L2,5.10505757 L2,7.42062089" id="Shape" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>`,
-  "delete-backspace": `<path d="M20 5H9l-7 7 7 7h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z"/><line x1="18" x2="12" y1="9" y2="15"/><line x1="12" x2="18" y1="9" y2="15"/>`
+  "delete-backspace": `<path d="M20 5H9l-7 7 7 7h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z"/><line x1="18" x2="12" y1="9" y2="15"/><line x1="12" x2="18" y1="9" y2="15"/>`,
+  "flip-horizontal": `<path d="m3 7 5 5-5 5V7"/><path d="m21 7-5 5 5 5V7"/><path d="M12 20v2"/><path d="M12 14v2"/><path d="M12 8v2"/><path d="M12 2v2"/>`,
+  "flip-vertical": `<path d="m17 3-5 5-5-5h10"/><path d="m17 21-5-5-5 5h10"/><path d="M4 12H2"/><path d="M10 12H8"/><path d="M16 12h-2"/><path d="M22 12h-2"/>`
 }
 
 class IconElement extends HTMLElement {
@@ -137,7 +139,7 @@ function createIconTemplate() {
   iconEmbed.setAttribute("stroke-linejoin", "round");
   iconStyle.innerHTML = `
     :host { display: inline; }
-    svg { display: inline-block; width: 1.2em; height: 1.2em; fill: transparent; }
+    svg { display: inline-block; width: 1em; height: 1em; fill: transparent; }
   `;
   iconEmbed.appendChild(iconUseRef);
   iconTemplate.content.append(iconStyle);

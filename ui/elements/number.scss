@@ -43,8 +43,22 @@
         z-index: 1000;
       }
     }
+
+    // TODO: determine the different before and after input + button patterns
+    .el-text {
+      border-top-right-radius: none;
+      border-bottom-right-radius: none;
+      border-right-color: transparent;
+      margin-right: -1px;
+
+      &:focus {
+        z-index: 1000;
+        border-right-color: #ef53e6;
+      }
+    }
   
     .el-button + .el-number {
+      caret-color: #ef53e6;
       border-radius: none;
       border-right-color: transparent;
       border-left-color: transparent;

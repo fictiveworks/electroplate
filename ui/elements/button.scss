@@ -34,6 +34,17 @@
   }
 }
 
+.el-button-icon {
+  line-height: 1;
+  padding: 0;
+
+  &:focus {
+    el-icon {
+      color: #ef53e6;
+    }
+  }
+}
+
 [data-color-scheme=dark] {
   .el-button {
     &:hover {
